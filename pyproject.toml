@@ -1,0 +1,18 @@
+[project]
+name = "agentcraft_mcp"
+version = "0.1.1"
+description = "AgentCraft MCP Server: A secure and scalable AI agent framework"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "uvicorn>=0.34.0",
+    "python-dotenv",
+    "mcp",
+    "spacy",
+    "spacy-transformers",
+    "pyyaml",
+    "aiohttp"
+]
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

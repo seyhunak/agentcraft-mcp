@@ -1,0 +1,6 @@
+python-dotenv
+mcp
+spacy
+spacy-transformers
+pyyaml
+aiohttp

@@ -1,0 +1,1182 @@
+---
+summarizer:
+  name: Summarizer
+  fields:
+    - id: url
+      type: url
+      label: Website URL
+      placeholder: Enter website URL
+      description: Enter the official URL of the website to fetch or display details.
+    - id: target
+      type: select
+      label: Target workflow - Slack or Calendar etc
+      placeholder: Enter job target workflow
+      options:
+        - value: slack
+          label: Slack
+        - value: gmail
+          label: Gmail
+        - value: sendgrid
+          label: SendGrid
+        - value: mailchimp
+          label: MailChimp
+      description: Enter the target if you like to trigger a workflow.
+  description: Summarizes website content and triggers workflows for Slack, Gmail,
+    or other platforms.
+  active: true
+job_description_writer:
+  name: Job Description Writer
+  fields:
+    - id: text
+      type: textarea
+      label: Job Description Text
+      placeholder: Enter job description text
+      description: Paste the text of a job description to analyze or process it for
+        hiring or career matching.
+    - id: target
+      type: select
+      label: Target workflow - Slack or Calendar
+      placeholder: Enter job target workflow
+      options:
+        - value: slack
+          label: Slack
+        - value: gmail
+          label: Gmail
+        - value: sendgrid
+          label: SendGrid
+        - value: mailchimp
+          label: MailChimp
+      description: Enter the target if you like to trigger Slack workflow or Calendar.
+  description: Analyzes job descriptions and generates tailored content for hiring
+    or career matching.
+  active: true
+job_matcher_for_roles:
+  name: Job Matcher For Roles
+  fields:
+    - id: text
+      type: textarea
+      label: Job Matcher Resume Text
+      placeholder: Enter resume content as text
+      description: Paste the text of a resume to analyze or process it for career matching.
+  description: Matches resumes to job roles based on skills, experience, and qualifications.
+  active: true
+career_progression_simulator:
+  name: Career Progression Simulator
+  fields:
+    - id: url
+      type: url
+      label: Company URL
+      placeholder: Enter company website URL
+      description: Enter the official URL of the company to fetch or display relevant
+        career details.
+    - id: company
+      type: text
+      label: Company Name
+      placeholder: Enter the company name
+      description: Provide the name of the company to identify and manage career or
+        job-related data.
+    - id: valuation
+      type: text
+      label: Company Valuation
+      placeholder: Enter the company valuation
+      description: Specify the company financial valuation for career or industry
+        analysis purposes.
+  description: Simulates career progression paths based on company data and industry trends.
+  active: true
+product_marketing:
+  name: Product Marketing
+  fields:
+    - id: company
+      type: text
+      label: Company Name
+      placeholder: Enter the company name
+      description: Enter the name of the company to configure marketing details or
+        campaigns.
+    - id: url
+      type: url
+      label: Company URL
+      placeholder: Enter company website URL
+      description: Provide the company website URL to assist in product marketing or
+        promotions.
+  description: Optimizes product marketing strategies and campaigns for better
+    reach and engagement.
+  active: true
+ad_manager:
+  name: Ad Manager
+  fields:
+    - id: company
+      type: text
+      label: Company Name
+      placeholder: Enter the company name
+      description: Provide the company name to associate advertisements or campaigns
+        with it.
+    - id: url
+      type: url
+      label: Company URL
+      placeholder: Enter company website URL
+      description: Enter the URL to display advertisements or track campaign
+        performance for the company.
+    - id: topic
+      type: textarea
+      label: Ad Description Topic
+      placeholder: Enter ad description topic for gathering news
+      description: Provide the description for the ad to analyze or prepare marketing
+        materials.
+  description: Manages ad campaigns and optimizes performance based on real-time data.
+  active: true
+lead_scoring_and_qualification:
+  name: Lead Scoring And Qualification
+  fields:
+    - id: text
+      type: textarea
+      label: Lead Scoring Analysis Text
+      placeholder: Enter your lead description text
+      description: Enter the details of leads to analyze and assign a scoring metric
+        based on relevance.
+  description: Scores and qualifies leads based on their relevance and potential
+    for conversion.
+  active: true
+ecommerce_optimization:
+  name: Ecommerce Optimization
+  fields:
+    - id: url
+      type: url
+      label: Company URL
+      placeholder: Enter company website URL
+      description: Enter the URL to analyze and optimize e-commerce performance.
+    - id: text
+      type: textarea
+      label: Ecommerce Sales Text
+      placeholder: Enter your ecommerce products sales data as text
+      description: Enter the details of products to analyze and assign a scoring
+        metric based on relevance.
+  description: Optimizes e-commerce platforms for better sales and customer experience.
+  active: true
+marketing_analyst:
+  name: Marketing Analyst
+  fields:
+    - id: url
+      type: url
+      label: Customer Domain
+      placeholder: Enter customer website URL
+      description: Provide the company website URL for marketing analysis.
+    - id: text
+      type: textarea
+      label: Market Analyst Project Data
+      placeholder: Enter your marketing analyst project data as text
+      description: Enter the details of marketing analyst to analyze.
+  description: Analyzes marketing data to provide insights and recommendations for
+    campaigns.
+  active: true
+email_writer:
+  name: Email Writer
+  fields:
+    - id: text
+      type: textarea
+      label: Paste the email content
+      placeholder: Enter your email content as text
+      description: Enter the detail of email content to analyze.
+  description: Generates and optimizes email content for better engagement and
+    communication.
+  active: true
+price_optimization:
+  name: Price Optimization
+  fields:
+    - id: url
+      type: url
+      label: Customer Domain
+      placeholder: Enter customer website URL
+      description: Provide the company website URL for price optimization.
+    - id: text
+      type: textarea
+      label: Paste the pricing and products content
+      placeholder: Enter your content as text
+      description: Enter the detail of content to analyze.
+  description: Optimizes pricing strategies based on market trends and customer data.
+  active: true
+inventory_management:
+  name: Inventory Management
+  fields:
+    - id: text
+      type: textarea
+      label: Paste the inventory and products content
+      placeholder: Enter your content as text
+      description: Enter the detail of content to analyze.
+  description: Manages and optimizes inventory levels for better supply chain efficiency.
+  active: true
+upsell_cross_sell_analyzer:
+  name: Upsell Cross Sell Analyzer
+  fields:
+    - id: customer_purchase_data
+      type: textarea
+      label: Paste the customer purchase data and content
+      placeholder: Enter your customer purchase data as text
+      description: Enter the detail of content to analyze.
+  description: Identifies opportunities for upselling and cross-selling based on
+    customer data.
+  active: true
+lead_nurturing_analyzer:
+  name: Lead Nurturing Analyzer
+  fields:
+    - id: text
+      type: textarea
+      label: Paste the customer email threads data and content
+      placeholder: Enter your customer communication data/followups from emails as text
+      description: Enter the detail of content to analyze.
+  description: Analyzes customer communication to improve lead nurturing strategies.
+  active: true
+expense_categorization:
+  name: Expense Categorization
+  fields:
+    - id: text
+      type: textarea
+      label: Paste the customer transactions history data and content to categorize
+        expenses
+      placeholder: Enter your customer transactions
+      description: Provide the detail of transactions to analyze.
+  description: Categorizes and analyzes expenses for better financial management.
+  active: true
+complience:
+  name: Compliance
+  fields:
+    - id: text
+      type: textarea
+      label: Paste the customer database records and content
+      placeholder: Enter your customer database records
+      description: Enter the detail of customer database records to analyze for FATCA
+        & CRS compliance.
+    - id: knowledge
+      type: file
+      label: Upload the knowledge base
+      placeholder: Upload the knowledge base to reference
+      description: Upload the knowledge base to use as baseline during analysis.
+  description: Ensures compliance with FATCA and CRS regulations for customer data.
+  active: true
+news_researcher:
+  name: News Researcher
+  fields:
+    - id: topic
+      type: text
+      label: Paste the topic to research in Google and summarize using Serper Google
+        search tool
+      placeholder: Enter your topic to research
+      description: Enter the detail of topic to research to analyze.
+  description: Researches and summarizes news topics using Google search tools.
+  active: true
+blog_content:
+  name: Blog Content
+  fields:
+    - id: search_query
+      type: text
+      label: Paste the video summarizer content in YouTube and summarize
+      placeholder: Enter your topic to research
+      description: Enter the detail of topic to research to analyze.
+  description: Generates blog content and summarizes videos for content creation.
+  active: true
+cash_flow_forecast:
+  name: Cash Flow Forecast
+  fields:
+    - id: text
+      type: textarea
+      label: Paste the cash flow forecast content
+      placeholder: Enter your cash flow to research
+      description: Enter the detail of cash flow to research to analyze.
+  description: Forecasts cash flow based on historical data and trends.
+  active: true
+incident:
+  name: Incident
+  fields:
+    - id: logs
+      type: textarea
+      label: Paste the incident logs, service response content
+      placeholder: Enter your incident logs here
+      description: Enter the detail of incident logs to analyze.
+    - id: metrics
+      type: textarea
+      label: Paste the key metrics logs
+      placeholder: Enter your key metrics here
+      description: Enter the detail of key metrics to analyze.
+  description: Analyzes incident logs and metrics to improve service response and
+    resolution.
+  active: true
+support:
+  name: Support
+  fields:
+    - id: ticket
+      type: text
+      label: Paste the ticket number if assigned by IT Support team
+      placeholder: Enter your ticket number
+      description: Enter the ticket number to gather updates.
+    - id: text
+      type: textarea
+      label: Paste the request details, with the issue statement as to record service
+        ticket
+      placeholder: Enter your request details
+      description: Enter the detail of request for team in SLA.
+  description: Manages and resolves support tickets for IT and customer service teams.
+  active: true
+data_leak_analyzer:
+  name: Data Leak Analyzer
+  fields:
+    - id: logs
+      type: textarea
+      label: Paste the logs, or event stream content
+      placeholder: Enter your logs here
+      description: Enter the detail of incident logs to analyze.
+  description: Analyzes logs and event streams to detect and prevent data leaks.
+  active: true
+revenue_analysis:
+  name: Revenue Analysis
+  fields:
+    - id: text
+      type: textarea
+      label: Paste the JSON content of revenue analysis or stream content
+      placeholder: Enter your revenue analysis data here
+      description: Enter the detail of revenue analysis to analyze.
+  description: Analyzes revenue data to provide insights and recommendations for growth.
+  active: true
+meeting_scheduler:
+  name: Meeting Scheduler
+  fields:
+    - id: text
+      type: textarea
+      label: Paste the conversations/emails history for all conversations
+      placeholder: Enter your conversations/emails data here
+      description: Enter the detail of conversation/emails to analyze.
+    - id: date
+      type: input
+      label: Paste the preferred date
+      placeholder: Paste the preferred date
+      description: Paste the preferred date.
+    - id: timezone
+      type: input
+      label: Paste the preferred timezone
+      placeholder: Paste the preferred timezone
+      description: Paste the preferred timezone.
+  description: Schedules meetings based on email and conversation history.
+  active: true
+automated_savings:
+  name: Automated Savings
+  fields:
+    - id: text
+      type: textarea
+      label: Paste the (income, spending, and transactions) history data.
+      placeholder: Enter your transactions history data
+      description: Enter the detail of transactions history to analyze.
+  description: Automates savings based on income, spending, and transaction history.
+  active: true
+insurance:
+  name: Insurance
+  fields:
+    - id: text
+      type: textarea
+      label: Paste the (customer data, insurance details).
+      placeholder: Enter your customer data and insurance data
+      description: Enter the detail of customer data history to further analysis.
+    - id: target
+      type: select
+      label: Target workflow - Slack or Calendar
+      placeholder: Enter job target workflow
+      options:
+        - value: slack
+          label: Slack
+        - value: gmail
+          label: Gmail
+        - value: sendgrid
+          label: SendGrid
+        - value: mailchimp
+          label: MailChimp
+      description: Enter the target if you like to trigger Slack workflow or Calendar.
+  description: Analyzes customer data and insurance details for better policy
+    recommendations.
+  active: true
+web_researcher:
+  name: Web Researcher
+  fields:
+    - id: url
+      type: url
+      label: Paste the website.
+      placeholder: Enter your website to start researching
+      description: Enter the website to start researching to further analysis and
+        create Neon DB.
+  description: Researches and analyzes website content for insights and data creation.
+  active: true
+stock_data:
+  name: Stock Data
+  fields:
+    - id: symbols
+      type: input
+      label: Paste the symbol.
+      placeholder: Enter your symbol
+      description: Enter the symbol to fetch real-time stock data for various symbols
+        from external stock APIs (e.g., TwelveData, Yahoo Finance).
+  description: Fetches and analyzes real-time stock data for investment insights.
+  active: true
+aviation_flight:
+  name: Aviation Flight
+  fields:
+    - id: flight_date
+      type: text
+      label: Enter the flight date
+      placeholder: Enter your flight date
+      description: Enter details of the flight details.
+    - id: flight_status
+      type: select
+      label: Enter the flight status
+      placeholder: Enter your flight status
+      options:
+        - value: boarded
+          label: Boarded
+        - value: delayed
+          label: Delayed
+        - value: not_boeared
+          label: Not Boarded
+        - value: na
+          label: NA
+      description: Enter details of the flight details.
+    - id: airport_code
+      type: text
+      label: Enter the air flight code
+      placeholder: Enter your air flight details
+      description: Enter details of the flight details.
+  description: Tracks and analyzes flight data for aviation management.
+  active: true
+similar_company_analysis:
+  name: Similar Company Analysis
+  fields:
+    - id: text
+      type: textarea
+      label: Enter the detail of the company, target keywords and industry
+      placeholder: Enter your details
+      description: Enter details of the company, target keywords and industry to do
+        competitor analysis, differentiator and opportunity analysis.
+  description: Analyzes similar companies for competitive insights and opportunities.
+  active: true
+newsletter_summary:
+  name: Newsletter Summary
+  fields:
+    - id: text
+      type: textarea
+      label: Enter the instructions
+      placeholder: Enter your instructions
+      description: Enter your instructions to agent will fetch your inbox for
+        newsletter, summarizes and sent an email.
+  description: Summarizes newsletters and sends email updates based on inbox content.
+  active: true
+interview_questionnaire:
+  name: Interview Questionnaire
+  fields:
+    - id: text
+      type: textarea
+      label: Enter the content of CV
+      placeholder: Enter your CV
+      description: Enter your instructions to agent will do analysis.
+  description: Generates interview questions based on CV content for hiring processes.
+  active: true
+loan_underwriting:
+  name: Loan Underwriting
+  fields:
+    - id: text
+      type: textarea
+      label: Enter the borrower data, credit evaluation score and other details of the
+        application
+      placeholder: Enter your data
+      description: Enter your instructions to agent will do analysis.
+  description: Analyzes borrower data for loan underwriting and approval processes.
+  active: true
+risk_assessment:
+  name: Risk Assessment
+  fields:
+    - id: borrower_name
+      type: text
+      label: Borrower Name
+      placeholder: Enter the borrower’s full name
+      description: Full name of the borrower for identification purposes.
+    - id: employment_status
+      type: select
+      label: Employment Status
+      placeholder: Select employment status
+      options:
+        - value: employed
+          label: Employed
+        - value: self
+          label: Self-Employed
+        - value: unemployed
+          label: Unemployed
+        - value: retired
+          label: Retired
+      description: Current employment status of the borrower.
+    - id: financial_statements
+      type: textarea
+      label: Upload Financial Statements
+      placeholder: Upload PDF or Excel file
+      description: Upload the borrower’s financial statements for analysis.
+    - id: additional_notes
+      type: textarea
+      label: Additional Notes
+      placeholder: Enter any additional notes or instructions
+      description: Any additional information or instructions for the agent ie. Tax
+        Country, Income, Nationality etc.
+  description: Assesses financial risk for borrowers based on employment,
+    financial statements, and additional notes.
+  active: true
+train_sops:
+  name: Train SOPs
+  fields:
+    - id: text
+      type: textarea
+      label: SOP Text
+      placeholder: Paste your Standard Operating Procedures (SOPs) here
+      description: Enter the text of your organization's SOPs for analysis and training.
+    - id: target
+      type: select
+      label: Target Workflow
+      placeholder: Select the target workflow for integration
+      options:
+        - value: slack
+          label: Slack
+        - value: gmail
+          label: Gmail
+        - value: sendgrid
+          label: SendGrid
+        - value: mailchimp
+          label: MailChimp
+      description: Select the workflow where the AI agents will be integrated.
+  description: Trains AI agents on Standard Operating Procedures (SOPs) for
+    organizational workflows.
+  active: true
+coding_app:
+  name: Coding App
+  fields:
+    - id: requirements
+      type: textarea
+      label: Requirements
+      placeholder: Paste your requirements and instructions to generate Python app
+        using Deepseek Coder
+      description: Enter the text of your requirements to generate analysis and code.
+  description: Generates Python applications based on user requirements using
+    Deepseek Coder.
+  active: true
+coding_mobile:
+  name: Coding Mobile
+  fields:
+    - id: requirements
+      type: textarea
+      label: Enter the application requirements
+      placeholder: Describe the features and functionality of the app
+      description: Provide detailed requirements for the iOS/macOS application to be
+        developed using SwiftUI and Apple SDKs.
+    - id: test_cases
+      type: textarea
+      label: Enter test case requirements
+      placeholder: Describe the test cases to ensure 100% code coverage
+      description: Provide details of the test cases to be generated for the application.
+  description: Crew specialized in building iOS and macOS applications using
+    SwiftUI and Apple SDKs. Handles coding, testing, and documentation.
+  active: true
+product_feedback:
+  name: Product Feedback
+  fields:
+    - id: data
+      type: textarea
+      label: Product Data
+      placeholder: Paste your product data, performance metrics, dumps
+      description: Enter the text of your product data to identify use cases.
+    - id: feedbacks
+      type: textarea
+      label: Product Feedbacks
+      placeholder: Paste your product details and feedbacks from App Store / Google
+        Play etc.
+      description: Enter the text of your product feedbacks to generate specs.
+  description: Analyzes product feedback and performance metrics for improvement
+    and innovation.
+  active: true
+fraud_preventation:
+  name: Fraud Prevention
+  fields:
+    - id: transaction_data
+      type: textarea
+      label: Transaction Data
+      placeholder: Upload transaction data file (CSV/JSON)
+      description: Upload the transaction data file containing details like
+        transaction ID, amount, timestamp, and customer information.
+    - id: risk_threshold
+      type: number
+      label: Risk Threshold
+      placeholder: Enter risk threshold (0-100)
+      description: Set the risk threshold for flagging transactions. Transactions with
+        a risk score above this value will be flagged.
+    - id: geolocation_check
+      type: checkbox
+      label: Enable Geolocation Check
+      placeholder: ""
+      description: Enable to check for geolocation anomalies in transactions.
+    - id: device_check
+      type: checkbox
+      label: Enable Device Check
+      placeholder: ""
+      description: Enable to check for device anomalies in transactions.
+    - id: behavioral_check
+      type: checkbox
+      label: Enable Behavioral Check
+      placeholder: ""
+      description: Enable to analyze customer behavior patterns for fraud detection.
+    - id: target_workflow
+      type: select
+      label: Target Workflow
+      placeholder: Select target workflow
+      options:
+        - value: slack
+          label: Slack
+        - value: email
+          label: Email
+        - value: sms
+          label: SMS
+        - value: crm
+          label: CRM
+      description: Select the target workflow to trigger alerts or actions for flagged
+        transactions.
+  description: Analyzes transaction data, assesses risk, and detects fraudulent
+    activities. Triggers workflows for alerts or actions.
+  active: true
+networking:
+  name: Networking
+  fields:
+    - id: knowledge
+      type: file
+      label: Upload LinkedIn Data
+      placeholder: Upload your LinkedIn connections data
+      description: Provide your LinkedIn connections data in CSV or JSON format.
+    - id: target_company
+      type: text
+      label: Target Company
+      placeholder: Enter the company to exclude
+      description: Specify the company to exclude when identifying long-time connections.
+    - id: target_role
+      type: text
+      label: Target Role
+      placeholder: Enter the role to analyze
+      description: Specify the role to analyze for leader interests.
+  description: Analyze LinkedIn data to gain insights into your network and career
+    opportunities.
+  active: true
+design_monetization:
+  name: Design Monetization
+  fields:
+    - id: platform
+      type: text
+      label: Platform
+      placeholder: Enter your platform design requirements
+      description: Specify the requirements for designing platform.
+    - id: requirements
+      type: textarea
+      label: API Design Requirements
+      placeholder: Enter your API design requirements
+      description: Specify the requirements for designing APIs.
+    - id: monetization_strategy
+      type: textarea
+      label: Monetization Strategy
+      placeholder: Enter your monetization strategy
+      description: Describe your strategy for monetizing APIs and value-added services.
+  description: Monetization System Design Agent to build system design,
+    architecture diagrams
+  active: true
+code_review:
+  name: Code Review Crew
+  fields:
+    - id: repo_url
+      type: input
+      label: GitHub Repository URL
+      placeholder: Enter the GitHub repository URL
+      description: The URL of the GitHub repository to analyze.
+    - id: commit_sha
+      type: input
+      label: Commit SHA
+      placeholder: Enter the commit SHA (optional)
+      description: The specific commit SHA to review. Leave blank to review the latest
+        commits.
+    - id: branch
+      type: input
+      label: Branch Name
+      placeholder: Enter the branch name (optional)
+      description: The branch to analyze. Defaults to the main branch if not specified.
+    - id: repository
+      type: textarea
+      label: Repository Details
+      placeholder: Enter the repository details as a JSON string
+      description: A single-line JSON string containing repository details (name,
+        full_name, id, owner, description).
+    - id: commits
+      type: textarea
+      label: Commits
+      placeholder: Enter the commits as a JSON string
+      description: A single-line JSON string containing an array of commits (id,
+        message, timestamp, url, author).
+    - id: head_commit
+      type: textarea
+      label: Head Commit
+      placeholder: Enter the head commit as a JSON string
+      description: A single-line JSON string containing an array of commits (id,
+        message, timestamp, url, author).
+  description: Reviews GitHub commits and suggests improvements.
+  active: true
+ad_copy:
+  name: AI-Powered Ad Copy Generator
+  fields:
+    - id: brand_name
+      type: text
+      label: Brand Name
+      placeholder: Enter your brand name
+      description: The name of your brand for which the ad copy will be generated.
+    - id: target_audience
+      type: text
+      label: Target Audience
+      placeholder: Enter your target audience
+      description: The demographic or audience you want to target with the ad copy.
+    - id: campaign_goal
+      type: text
+      label: Campaign Goal
+      placeholder: Enter your campaign goal
+      description: The primary objective of the ad campaign (e.g., increase sign-ups,
+        boost sales).
+    - id: brand_voice
+      type: select
+      label: Brand Voice
+      placeholder: Select your brand voice
+      options:
+        - value: professional
+          label: Professional
+        - value: casual
+          label: Casual
+        - value: friendly
+          label: Friendly
+        - value: authoritative
+          label: Authoritative
+      description: The tone and style of your brand’s communication.
+  description: Generates persuasive, data-driven ad copy tailored to your brand’s
+    voice, saving time and maximizing impact.
+  active: true
+code_testing:
+  name: Test Suite Agent
+  fields:
+    - id: acceptance_criteria
+      type: text
+      label: Expected Acceptance Criteria
+      placeholder: Enter the expected acceptance criteria
+      description: Define the acceptance criteria that the test suite should cover.
+    - id: user_stories
+      type: text
+      label: User Stories
+      placeholder: Enter the user stories
+      description: Define the user stories that the test suite should cover.
+    - id: codebase
+      type: textarea
+      label: Codebase Access
+      placeholder: Enter the URL to access the codebase
+      description: Provide the URL or access details for the codebase to be tested.
+  description: Automates the creation and execution of a complete test suite,
+    covering unit testing, performance testing, self-healing testing, and
+    regression testing.
+  active: true
+scheduler:
+  name: Scheduler Crew
+  fields:
+    - id: task_type
+      type: select
+      label: Task Type
+      placeholder: Select task type
+      options:
+        - value: one_time
+          label: One-Time Task
+        - value: recurring
+          label: Recurring Task
+      description: Choose whether the task is one-time or recurring.
+    - id: task_description
+      type: text
+      label: Task Description
+      placeholder: Enter task description
+      description: Describe the task (e.g., "Send me the latest AI news at 8 AM and 5
+        PM every day").
+    - id: delivery_method
+      type: select
+      label: Delivery Method
+      placeholder: Select delivery method
+      options:
+        - value: email
+          label: Email
+        - value: slack
+          label: Slack
+        - value: sms
+          label: SMS
+      description: Choose how you want to receive the content.
+  description: Automates scheduling of one-time and recurring tasks,
+    fetching/generating content, and delivering it to you.
+  active: true
+defi_regulation:
+  name: DEFI Regulation
+  fields:
+    - id: legal_database
+      type: text
+      label: Legal Database
+      placeholder: Enter legal database details (e.g., SEC, MiCA)
+      description: The database containing applicable regulations.
+    - id: jurisdiction
+      type: select
+      label: Jurisdiction
+      placeholder: Select jurisdiction
+      options:
+        - value: US
+          label: United States
+        - value: EU
+          label: European Union
+        - value: Global
+          label: Global
+      description: The jurisdiction for regulatory analysis.
+    - id: smart_contract_data
+      type: text
+      label: Smart Contract Data
+      placeholder: Enter smart contract data (e.g., JSON)
+      description: Data from smart contracts to verify compliance.
+    - id: compliance_rules
+      type: text
+      label: Compliance Rules
+      placeholder: Enter compliance rules (e.g., SEC, MiCA)
+      description: Rules to ensure compliance with regulations.
+    - id: user_data
+      type: text
+      label: User Data
+      placeholder: Enter user data (e.g., JSON or CSV)
+      description: Data for KYC/AML verification.
+    - id: identity_verification_tool
+      type: select
+      label: Identity Verification Tool
+      placeholder: Select verification tool
+      options:
+        - value: civic
+          label: Civic
+        - value: jumio
+          label: Jumio
+        - value: other
+          label: Other
+      description: Tool for identity verification.
+    - id: token_characteristics
+      type: text
+      label: Token Characteristics
+      placeholder: Enter token characteristics (e.g., JSON)
+      description: Characteristics of the token for legal classification.
+    - id: legal_framework
+      type: select
+      label: Legal Framework
+      placeholder: Select legal framework
+      options:
+        - value: SEC
+          label: SEC (USA)
+        - value: MiCA
+          label: MiCA (EU)
+        - value: FINMA
+          label: FINMA (Switzerland)
+      description: Legal framework for token classification.
+    - id: transaction_data
+      type: text
+      label: Transaction Data
+      placeholder: Enter transaction data (e.g., JSON or CSV)
+      description: Data for risk assessment.
+    - id: risk_assessment_framework
+      type: select
+      label: Risk Assessment Framework
+      placeholder: Select framework
+      options:
+        - value: chainalysis
+          label: Chainalysis
+        - value: elliptic
+          label: Elliptic
+        - value: custom
+          label: Custom
+      description: Framework for assessing risks.
+    - id: compliance_data
+      type: text
+      label: Compliance Data
+      placeholder: Enter compliance data (e.g., JSON or CSV)
+      description: Data for generating regulatory reports.
+    - id: reporting_tool
+      type: select
+      label: Reporting Tool
+      placeholder: Select reporting tool
+      options:
+        - value: xml
+          label: XML
+        - value: pdf
+          label: PDF
+        - value: csv
+          label: CSV
+      description: Tool for generating regulatory reports.
+  description: Automates compliance-related tasks for DEFI regulations.
+  active: true
+  
+onboard_guard:
+  name: Onboard Guard
+  fields:
+    - id: phone_number
+      type: text
+      label: Phone Number
+      placeholder: Enter your phone number
+      description: Phone number for verification and risk assessment.
+    - id: email
+      type: text
+      label: Email
+      placeholder: Enter your email address
+      description: Email address for account creation and communication.
+    - id: ip_address
+      type: text
+      label: IP Address
+      placeholder: Enter your IP address
+      description: IP address for geolocation and risk analysis.
+    - id: device_fingerprint
+      type: text
+      label: Device Fingerprint
+      placeholder: Enter device fingerprint
+      description: Unique identifier for the user's device.
+    - id: verification_tool
+      type: select
+      label: Verification Tool
+      placeholder: Select verification tool
+      options:
+        - value: twilio
+          label: Twilio
+        - value: numverify
+          label: NumVerify
+        - value: other
+          label: Other
+      description: Tool for phone number verification.
+    - id: transaction_history
+      type: textarea
+      label: Transaction History
+      placeholder: Enter transaction history (e.g., JSON or CSV)
+      description: Historical transaction data for risk assessment.
+    - id: risk_level
+      type: select
+      label: Risk Level
+      placeholder: Select risk level
+      options:
+        - value: low
+          label: Low
+        - value: medium
+          label: Medium
+        - value: high
+          label: High
+      description: Risk level determined by the system.
+    - id: additional_verification
+      type: textarea
+      label: Additional Verification
+      placeholder: Enter additional verification details
+      description: Details for users flagged for additional verification.
+    - id: transaction_patterns
+      type: textarea
+      label: Transaction Patterns
+      placeholder: Enter transaction patterns (e.g., JSON or CSV)
+      description: Patterns in transactions for fraud detection.
+    - id: call_routing_data
+      type: textarea
+      label: Call Routing Data
+      placeholder: Enter call routing data (e.g., JSON or CSV)
+      description: Data for monitoring call routing patterns.
+    - id: revenue_streams
+      type: textarea
+      label: Revenue Streams
+      placeholder: Enter revenue streams (e.g., JSON or CSV)
+      description: Data for monitoring revenue streams.
+    - id: task_type
+      type: select
+      label: Task Type
+      placeholder: Select task type
+      options:
+        - value: one_time
+          label: One-Time Task
+        - value: recurring
+          label: Recurring Task
+      description: Choose whether the task is one-time or recurring.
+    - id: task_description
+      type: text
+      label: Task Description
+      placeholder: Enter task description
+      description: Describe the task (e.g., 'Send me the latest AI news at 8 AM and 5 PM every day').
+    - id: delivery_method
+      type: select
+      label: Delivery Method
+      placeholder: Select delivery method
+      options:
+        - value: email
+          label: Email
+        - value: slack
+          label: Slack
+        - value: sms
+          label: SMS
+      description: Choose how you want to receive the content.
+    - id: kyc_status
+      type: text
+      label: KYC Status
+      placeholder: Enter KYC status
+      description: KYC (Know Your Customer) verification status.
+    - id: aml_status
+      type: text
+      label: AML Status
+      placeholder: Enter AML status
+      description: AML (Anti-Money Laundering) verification status.
+    - id: irsf_detection
+      type: textarea
+      label: IRSF Detection
+      placeholder: Enter IRSF detection details
+      description: Details of detected International Revenue Share Fraud (IRSF) patterns.
+  description: Detect and prevent fake accounts and IRSF during user onboarding.
+  active: true
+    
+full_stack:
+  name: Full Stack
+  fields:
+    - id: product_name
+      type: text
+      label: Product Name
+      placeholder: Enter your product name
+      description: The name of the product for which the PRD will be generated.
+    - id: business_goals
+      type: textarea
+      label: Business Goals
+      placeholder: Enter your business goals
+      description: The primary objectives and goals of the product.
+    - id: tech_stack
+      type: text
+      label: Tech Stack
+      placeholder: Enter your tech stack
+      description: The technology stack to be used for the product.
+    - id: frontend_tech_stack
+      type: text
+      label: Frontend Tech Stack
+      placeholder: Enter your frontend tech stack
+      description: The technology stack for the frontend (e.g., React, Angular).
+    - id: backend_tech_stack
+      type: text
+      label: Backend Tech Stack
+      placeholder: Enter your backend tech stack
+      description: The technology stack for the backend (e.g., Node.js, Django).
+    - id: responsive_design
+      type: select
+      label: Responsive Design
+      placeholder: Select responsive design requirements
+      options:
+        - value: mobile-first
+          label: Mobile First
+        - value: desktop-first
+          label: Desktop First
+      description: The approach to responsive design for the product.
+    - id: scalability
+      type: textarea
+      label: Scalability Requirements
+      placeholder: Enter scalability requirements
+      description: The scalability requirements for the backend architecture.
+    - id: security
+      type: textarea
+      label: Security Requirements
+      placeholder: Enter security requirements
+      description: The security requirements for the backend architecture.
+    - id: development_tools
+      type: text
+      label: Development Tools
+      placeholder: Enter your development tools
+      description: The tools to be used for development (e.g., Git, Docker).
+    - id: design_system
+      type: text
+      label: Design System
+      placeholder: Enter your design system
+      description: The design system to be used for UI mockups (e.g., Material Design,
+        Tailwind CSS).
+    - id: target_devices
+      type: text
+      label: Target Devices
+      placeholder: Enter target devices
+      description: The devices for which the UI should be optimized (e.g., mobile,
+        desktop, tablet).
+  description: Generates detailed PRDs, architecture plans, and development
+    workflows for your product.
+  active: true
+job_application:
+  name: Job Application Tailoring
+  fields:
+    - id: job_posting_url
+      type: text
+      label: Job Posting URL
+      placeholder: Enter the URL of the job posting
+      description: The URL of the job posting to analyze.
+    - id: github_url
+      type: text
+      label: GitHub URL
+      placeholder: Enter your GitHub profile URL
+      description: The URL of the applicants GitHub profile.
+    - id: personal_writeup
+      type: textarea
+      label: Personal Write-up
+      placeholder: Enter a brief description of your background and skills
+      description: A brief description of the applicants background and skills.
+    - id: knowledge
+      type: file
+      label: Upload Resume (Markdown)
+      placeholder: Upload your resume in .md format
+      description: The resume file to be analyzed and tailored.
+      accept: .md
+  description: Generates tailored resumes and interview materials for job applications.
+  active: true
+reply_automation:
+  name: Marketing Automation
+  fields:
+    - id: brand_name
+      type: text
+      label: Brand Name
+      placeholder: Enter your brand name
+      description: The name of your brand for which the marketing campaign will be run.
+    - id: target_audience
+      type: text
+      label: Target Audience
+      placeholder: Enter your target audience
+      description: The demographic or audience you want to target with the campaign.
+    - id: campaign_goal
+      type: text
+      label: Campaign Goal
+      placeholder: Enter your campaign goal
+      description: The primary objective of the campaign (e.g., increase sign-ups,
+        boost sales).
+    - id: brand_voice
+      type: select
+      label: Brand Voice
+      placeholder: Select your brand voice
+      options:
+        - value: professional
+          label: Professional
+        - value: casual
+          label: Casual
+        - value: friendly
+          label: Friendly
+        - value: authoritative
+          label: Authoritative
+      description: The tone and style of your brand’s communication.
+    - id: keywords
+      type: textarea
+      label: Keywords
+      placeholder: Enter relevant keywords (comma-separated)
+      description: A list of keywords related to your product or service.
+  description: Automates marketing tasks by finding and engaging with relevant posts online.
+  active: true
+project_manager:
+  name: 'Project Management Assistant'
+  fields:
+    - id: 'text'
+      type: 'textarea'
+      label: 'Paste the project description'
+      placeholder: 'Enter your project description to plan'
+      description: 'Enter the details of the project to automate task generation and scheduling.'
+    - id: 'current_date'
+      type: 'text'
+      label: 'Current Date'
+      placeholder: 'Current Date'
+      description: 'The Current Date to be analyzed.'
+      accept: '.csv'
+  description: 'Automates project planning by generating tasks, dependencies, and schedules from a description.'
+  active: true

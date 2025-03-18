@@ -7,5 +7,5 @@
     "env": {
         "AGENTCRAFT_BEARER_TOKEN": "Your AgentCraft API Token"
     },
-    "homepage": "https://github.com/seyhunak/agentcraft"
+    "homepage": "https://github.com/seyhunak/agentcraft-mcp"
 }

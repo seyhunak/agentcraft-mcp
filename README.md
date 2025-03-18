@@ -1,5 +1,8 @@
 # AgentCraft MCP Server
 
+<img width="125" alt="logo_sm_dark" src="https://github.com/user-attachments/assets/db0f10fa-7766-42ac-96ad-cc870fd9ae6c" />
+
+
 ## Overview
 
 AgentCraft is a partner product of Crafted™. Our AI Agent framework allows you to deploy intelligent agents that understand, learn, and evolve with your business needs. It provides premade and custom AI agents for enterprises, ensuring secure and scalable solutions.
